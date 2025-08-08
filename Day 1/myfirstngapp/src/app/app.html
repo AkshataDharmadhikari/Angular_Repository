@@ -1,0 +1,27 @@
+<h1>Welcome to Angular</h1>
+<p>Akshata's first app</p>
+<div>
+  <h2>First Name: {{ firstName }}</h2>
+  <h2>Last Name: {{ lastName }}</h2>
+  <h2>Age: {{ age }}</h2>
+  <h2>Gender: {{ gender }}</h2>
+  <h2>Email: {{ email }}</h2>
+
+ 
+  <select>
+    <option *ngFor="let h of hobbies">{{ h }}</option>
+  </select>
+
+  
+  <div *ngFor="let h of hobbies">
+    <label>
+      <input type="checkbox"> {{ h }}
+    </label>
+  </div>
+
+  <h2><button (click)="greetUser()">Greet</button></h2>
+
+ 
+  <input id="hobbytype" type="text" [(ngModel)]="newHobby" placeholder="Type the hobby you want to add">
+  <h2><button (click)="addHobby()">Add Hobby</button></h2>
+</div>

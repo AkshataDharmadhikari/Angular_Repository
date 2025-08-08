@@ -1,0 +1,30 @@
+<h1> PIPES IN ANGULAR </h1>
+<h2> {{ firstName | uppercase | greetings  }}</h2>
+<h2> {{ lastName  |  lowercase }}</h2>
+<h2> {{ salary  |  currency : 'EUR' : 'code' }}</h2>
+<h2> {{ salary * 12  |  currency : 'EUR' : 'code' }}</h2>
+<h2>  {{ product | json }}</h2>
+<h2>  {{ orderdate | date : 'dd/mm/yy HH:MM' }}</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Emp No</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Gender</th>
+      <th>Salary ($)</th>
+      <th>Permanent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employeeList">
+      <td>{{ emp.empNo }}</td>
+      <td>{{ emp.empName | gendergreetings : emp.empGender  }}</td>
+      <td>{{ emp.empDesignation }}</td>
+      <td>{{ emp.empGender }}</td>
+      <td>{{ emp.empSal }}</td>
+      <td>{{ emp.empIspermenant ? 'Yes' : 'No' }}</td>
+    </tr>
+  </tbody>
+</table>

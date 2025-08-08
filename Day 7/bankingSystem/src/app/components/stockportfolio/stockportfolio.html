@@ -1,0 +1,37 @@
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Stock ID</th>
+      <th>Quantity</th>
+      <th>Purchase Price</th>
+      <th>Current Price</th>
+      <th>Invested</th>
+      <th>Current Value</th>
+      <th> Status </th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let stock of stockdata">
+      <td>{{ stock.stockId }}</td>
+      <td>{{ stock.quantity }}</td>
+      <td>{{ stock.purchasePrice }}</td>
+      <td>{{ stock.currentPrice }}</td>
+      <td>{{ stock.invested }}</td>
+      <td>{{ stock.currentValue }}</td>
+      <td> {{ stock.status }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top: 20px;">
+  <h3>Portfolio Summary</h3>
+  <p><strong>Total Investment:</strong> {{ totalInvested }}</p>
+  <p><strong>Portfolio Value:</strong> {{ portfolioValue }}</p>
+  <p>
+    <strong>Overall Status:</strong>
+    <span>
+      {{ overallStatus }}
+    </span>
+  </p>
+</div>

@@ -1,0 +1,13 @@
+<p>west works!</p>
+<table border="'1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>City</th>
+      <th>Call</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor = "let office of offices">
+      <td>{{ office.city }}</td>
+      <td>{{ office.call }}</td>
+      <td>{{ office.email }}</td>
+    </tr>
+  </table>
