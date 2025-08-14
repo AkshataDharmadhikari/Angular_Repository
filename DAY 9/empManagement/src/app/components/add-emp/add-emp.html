@@ -1,0 +1,19 @@
+
+
+<form (ngSubmit)="addEmployee()">
+  <label>Emp No:</label>
+  <input [(ngModel)]="newEmployee.empNo" name="empNo" required /><br />
+
+  <label>Name:</label>
+  <input [(ngModel)]="newEmployee.empName" name="empName" required /><br />
+
+  <label>Designation:</label>
+  <input [(ngModel)]="newEmployee.empDesignation" name="empDesignation" required /><br />
+
+  <label>Salary:</label>
+  <input type="number" [(ngModel)]="newEmployee.empSalary" name="empSalary" required /><br />
+
+  
+  <button type="submit">Add</button>
+</form>
+<p *ngIf="statusMessage" class="success-message">{{ statusMessage }}</p>

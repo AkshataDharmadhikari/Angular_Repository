@@ -1,0 +1,40 @@
+/* Basic reset and layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #3c4e5e;
+  padding: 10px 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Link styling */
+a[routerLink] {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+a[routerLink]:hover {
+  background-color: #555;
+}
+
+/* Active link styling (optional, if using routerLinkActive) */
+a[routerLink].active {
+  background-color: #007bff;
+}
+
+/* Content area */
+router-outlet {
+  display: block;
+  padding: 20px;
+}

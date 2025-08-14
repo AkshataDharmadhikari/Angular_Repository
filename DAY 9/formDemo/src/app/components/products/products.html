@@ -1,0 +1,10 @@
+<div *ngFor="let p of productList ; index as index">
+<p> {{ p }} <button (click)= "deleteProduct(index)"> Delete </button></p>
+</div>
+
+
+<form name="myform">
+    <input type = "text" name="product" [(ngModel)] = "product" placeholder="Enter product">
+    <button type="submit" (click)="addProduct(product)">Add product</button>
+
+</form>

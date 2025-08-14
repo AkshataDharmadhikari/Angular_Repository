@@ -1,0 +1,20 @@
+<!-- edit-emp.html -->
+<h2>Edit Employee</h2>
+<form (ngSubmit)="updateEmployee()">
+  <label>Emp No:</label>
+  <input [(ngModel)]="employee.empNo" name="empNo" /><br />
+
+  <label>Name:</label>
+  <input [(ngModel)]="employee.empName" name="empName" /><br />
+
+  <label>Designation:</label>
+  <input [(ngModel)]="employee.empDesignation" name="empDesignation" /><br />
+
+  <label>Salary:</label>
+  <input type="number" [(ngModel)]="employee.empSalary" name="empSalary" /><br />
+
+  <label>Status:</label>
+  <input type="checkbox" [(ngModel)]="employee.empPermenant" name="empPermenant" /> Permanent<br />
+
+  <button type="submit">Update</button>
+</form>
